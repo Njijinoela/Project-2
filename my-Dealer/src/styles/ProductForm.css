@@ -1,0 +1,141 @@
+.product-form-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border: none;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin-bottom: 2rem;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.4)
+    ),
+    url("../../public/wheat-7208997_640.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: beige;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  color: #daa520;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-item {
+  color: #fff;
+  font-weight: bold;
+}
+
+.logout-btn {
+  background-color: #ffa500;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.product-form {
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-group input[type="file"] {
+  padding: 0.5rem 0;
+}
+
+.form-group button {
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  background-color: #ffa500;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-products-btn {
+  padding: 0.5rem 1rem;
+  background-color: #ffa500;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  margin-right: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.view-products-btn:hover {
+  background-color: #b88a1b;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.view-products-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .product-form {
+    padding: 1rem;
+  }
+}
