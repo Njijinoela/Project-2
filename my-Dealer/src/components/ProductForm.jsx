@@ -5,7 +5,7 @@ import "../styles/ProductForm.css";
 
 const ProductForm = () => {
   const navigate = useNavigate();
-  const { addProduct } = useProducts();
+  const { addProduct, products } = useProducts();
   const [formData, setFormData] = useState({
     productName: "",
     phone: "",
@@ -70,6 +70,10 @@ const ProductForm = () => {
     const data = await response.json();
     if (response.ok) {
       console.log("Product added:", data);
+
+      addProduct(data);
+
+      navigate("/view-products");
     } else {
       console.error("Error:", data);
     }

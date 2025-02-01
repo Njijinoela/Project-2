@@ -174,12 +174,12 @@ class Product(db.Model):
     product_name = db.Column(db.String(250), nullable=False, index=True)
     price = db.Column(db.Float, nullable=False)
     phone = db.Column(db.String(10), nullable=False)
-    image_url = db.Column(db.String(500), nullable=False)
+    image_url = db.Column(db.Text, nullable=False)
     description = db.Column(db.Text, nullable=False)
     location = db.Column(db.String(250), nullable=False)
     farm_name = db.Column(db.String(250), nullable=False)
     
-    farmer_id = db.Column(db.Integer, db.ForeignKey('farmer.id', ondelete='CASCADE'), nullable=False)
+    farmer_id = db.Column(db.Integer, db.ForeignKey('farmer.id', ondelete='CASCADE'), nullable=True)
     
     is_active = db.Column(db.Boolean, default=True, nullable=False)
     is_deleted = db.Column(db.Boolean, default=False, nullable=False)

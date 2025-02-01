@@ -20,7 +20,9 @@ def add_product():
         if not all(field in data for field in required_fields):
             return jsonify({"error": "Missing required fields"}), 400
 
-        # Create new Product (without farmer_id)
+        # Provide a default farmer_id or set to None (if you don't want to change database schema)
+        farmer_id = data.get("farmer_id", None)  # Set None or default value if missing
+
         new_product = Product(
             product_name=data["product_name"],
             price=float(data["price"]),
@@ -29,6 +31,7 @@ def add_product():
             description=data["description"],
             location=data["location"],
             farm_name=data["farm_name"],
+            farmer_id=farmer_id  # Now allows null if farmer_id is missing
         )
 
         db.session.add(new_product)
