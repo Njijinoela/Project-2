@@ -1,10 +1,10 @@
 from flask import Blueprint, request, jsonify
-from models.models import db, Product  # Ensure you're importing db & Product correctly
+from models.models import db, Product  
 
 # Define the Blueprint
 product_bp = Blueprint("product_bp", __name__)
 
-# Example route to test
+
 @product_bp.route("/products", methods=["GET"])
 def get_products():
     products = Product.query.all()
@@ -20,7 +20,7 @@ def add_product():
         if not all(field in data for field in required_fields):
             return jsonify({"error": "Missing required fields"}), 400
 
-        # Provide a default farmer_id or set to None (if you don't want to change database schema)
+        # Provide a default farmer_id or set to None 
         farmer_id = data.get("farmer_id", None)  # Set None or default value if missing
 
         new_product = Product(

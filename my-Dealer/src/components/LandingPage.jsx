@@ -10,7 +10,7 @@ const LandingPage = () => {
   };
 
   const handleSignUpClick = () => {
-    navigate("/signup"); // You'll need to create a signup route and component
+    navigate("/signup");
   };
 
   return (
